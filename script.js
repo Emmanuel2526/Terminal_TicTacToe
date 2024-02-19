@@ -6,7 +6,7 @@ t = 0;
 playwith = "computer";
 gp = 0;
 gpl = [];
-ava = true;
+ava = false;
 board = [["_", "_", "_"],
          ["_", "_", "_"],
          ["_", "_", "_"]]; 
@@ -84,7 +84,7 @@ function ai(){
       pan();
   }
   if(win()){
-    //alert("Player "+tl[t%2]+" won!!"); 
+    alert("Player "+tl[t%2]+" won!!"); 
     return;
   }
   t++;
