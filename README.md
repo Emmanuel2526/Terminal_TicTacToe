@@ -1,3 +1,5 @@
 # Terminal_TicTacToe
+<br>
 A TicTacToe game using HTML/CSS/JavaScript 
-Link to project...: hashterminal.neocities.org/TicTacToe/main.html
+<br>
+[Link to project...](https://hashterminal.neocities.org/TicTacToe/main)
