@@ -3,7 +3,7 @@ localStorage.test += 's'
 var default_settings_items = {
     "page": "page1",
     "playWith": "computer",
-    "computerGoes" : "first",
+    "computerGoes" : "second",
     "symbolGoesFirst" : "X"
 }
 //Variables for settings ends here
