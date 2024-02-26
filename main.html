@@ -8,37 +8,76 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <div id = "gn">TicTacToe</div>
-        <button id="so" onclick="rs()">StartOver</button>
-        <table id="board">
-            <tr>
-                <td class="c" id="a3" onclick="ttt(a, 3, 'a3')"></td>
-                <td class="c" id="b3" onclick="ttt(b, 3, 'b3')"></td>
-                <td class="c" id="c3" onclick="ttt(c, 3, 'c3')"></td>
-            </tr>
-            <tr>
-                <td class="c" id="a2" onclick="ttt(a, 2, 'a2')"></td>
-                <td class="c" id="b2" onclick="ttt(b, 2, 'b2')"></td>
-                <td class="c" id="c2" onclick="ttt(c, 2, 'c2')"></td>
-            </tr>
-            <tr>
-                <td class="c" id="a1" onclick="ttt(a, 1, 'a1')"></td>
-                <td class="c" id="b1" onclick="ttt(b, 1, 'b1')"></td>
-                <td class="c" id="c1" onclick="ttt(c, 1, 'c1')"></td>
-            </tr>
-        </table> 
-        <!--div id="settings">
-           <div id="hoai">
-            <button id="pai">Play Against Computer</button>
-            <button id="phm">Play Against Human</button>
-          </div>
-          <div id="ifpai">
-            Okay you choose to play with a computer
-          </div>
-          <div id="ifphm">
-            Okay You choose to play with a human.
-          </div>
-        </div-->
+        <!--Page 1-->
+        <div id="game">
+            <div id = "gn">TicTacToe</div>
+            <button id="so" onclick="rs()">StartOver</button>
+            <button id="settings" class="settings_style" onclick="st('show_settings')">Settings</button>
+            <table id="board">
+                <tr>
+                    <td class="c" id="a3" onclick="ttt(a, 3, 'a3')"></td>
+                    <td class="c" id="b3" onclick="ttt(b, 3, 'b3')"></td>
+                    <td class="c" id="c3" onclick="ttt(c, 3, 'c3')"></td>
+                </tr>
+                <tr>
+                    <td class="c" id="a2" onclick="ttt(a, 2, 'a2')"></td>
+                    <td class="c" id="b2" onclick="ttt(b, 2, 'b2')"></td>
+                    <td class="c" id="c2" onclick="ttt(c, 2, 'c2')"></td>
+                </tr>
+                <tr>
+                    <td class="c" id="a1" onclick="ttt(a, 1, 'a1')"></td>
+                    <td class="c" id="b1" onclick="ttt(b, 1, 'b1')"></td>
+                    <td class="c" id="c1" onclick="ttt(c, 1, 'c1')"></td>
+                </tr>
+            </table>
+        </div>
+        <!--Page 2-->
+        <div id="settings_page">
+            <div id = "gn">Settings</div>
+            <div id="subs">First player goes as?</div>
+            <div id="ans">
+                <input type="checkbox" id="firstX">
+                <label for="firstX">X</label>
+                <input type="checkbox" id="firstO">
+                <label for="firstO">O</label>
+            </div>
+            <div id="result">Therefore second player goes as:</div>
+            <div id="subs">Play with?</div>
+            <div id="ans">
+                <input type="checkbox" id="playHuman">
+                <label for="playHuman">Me</label>
+                <input type="checkbox" id="playComputer">
+                <label for="playComputer">Computer</label>
+            </div>
+            <!--If play with computer-->
+            <div id="playWithComputer">
+                <div id="subs">Who plays first?</div>
+                <div id="ans">
+                    <input type="checkbox" id="meplay">
+                    <label for="meplay">Me</label>
+                    <input type="checkbox" id="computerplay">
+                    <label for="computerplay">Computer</label>
+                </div>
+                <div id="subs">Difficulty Level?</div>
+                <div id="ans">
+                    <input type="checkbox" id="easy_level">
+                    <label for="easy_level">Easy</label>
+                    <input type="checkbox" id="medium_level">
+                    <label for="medium_level">Hard</label>
+                    <input type="checkbox" id="hard_level">
+                    <label for="hard_level">Hard</label>
+                </div>
+            </div>
+            <!--If play with human.-->
+            <div id="playWithHuman">
+                Not sure what to ask.
+            </div>
+            <button id="restore_default_settings">Restore Defaults</button>
+            <button id="save_settings" class="settings_style">Save</button>
+            <button id="so" onclick="st('return_to_game')">Return</button>
+        </div>
+        <script src="variables.js"></script>
         <script src="script.js"></script>
+        <script src="settings.js"></script>
     </body>
 </html>

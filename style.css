@@ -27,11 +27,58 @@ td {
   color: green;
   font-size: 60px;
 }
+/* Custom checkbox styling */
+input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+input[type="checkbox"]:checked {
+  background-color: #007bff;
+}
+
+/* Custom label styling */
+label {
+  margin-left: 5px;
+  vertical-align: middle;
+  font-size: 30px;
+  font-family: 'Times New Roman', Times, serif;
+}
+#subs{
+  color: black;
+  font-size: 40px;
+}
 #so{
   background-color:green;
   font-size: 15px;
   position: fixed;
   right: 10px;
+  top: 2px;
+  width: 100px;
+  height: 50px;
+}
+.settings_style{
+  background-color:green;
+  font-size: 15px;
+  position: fixed;
+  right: 111px;
+  top: 2px;
+  width: 100px;
+  height: 50px;
+}
+#restore_default_settings{
+  background-color:green;
+  font-size: 15px;
+  position: fixed;
+  right: 212px;
   top: 2px;
   width: 100px;
   height: 50px;
@@ -43,6 +90,9 @@ td {
   width: 50%;
   background-color: green;
 }
-#settings{
+#settings_page{
+  display: none;
+}
+#game{
   display: none;
 }
