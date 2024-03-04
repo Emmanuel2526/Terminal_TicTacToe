@@ -15,7 +15,7 @@ function rs(){
         }
     }
     t = 0;
-    setTimeout(default_settings, 500);
+    setTimeout(default_settings, 250);
 }
 function compF(){if(default_settings_items["playWith"] == "computer" && default_settings_items["computerGoes"] == "first"){ai();}}
 function default_settings(){
@@ -28,7 +28,7 @@ function default_settings(){
     }
 }
 function load_default_settings(){
-    setTimeout(default_settings, 2000);
+    setTimeout(default_settings, 250);
 }
 window.onload = function(){
     load_default_settings();

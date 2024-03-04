@@ -71,22 +71,18 @@ function ai(){
   t++;
 }
 function ttt(f, r, cn){
-  if(win() || ava){
-    return;
-  }
+  if(win() || ava){return;}
   if(cell(f, r, 'r', null) == "_"){
     cell(f, r, 's', tl[t%2]);
     localStorage.test += '['+board+']';
     if(win()){
       alert("Player "+tl[t%2]+" won!!"); 
-      localStorage.test += 'e'
+      //localStorage.test += 'e'
       return;
     }
     t++;
-    if(default_settings_items["playWith"] == "computer"){setTimeout(ai, 1000);}
+    if(default_settings_items["playWith"] == "computer"){setTimeout(ai, 250);}
     //Second player clicks and restarts whole function. If ai second, ai here.
-    if(draw()){
-      alert("Draw!!!")
-    }
+    if(draw()){alert("Draw!!!")}
   }
 }
