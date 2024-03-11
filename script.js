@@ -120,7 +120,7 @@ function ai(){
         occupy_corner_cell();//N.B: This condition only happens when the user did not occupy centre square to begin with. At this poiint the computer has won the game
       }else{
         if(!block(false)){//try to block, if you cannot then...
-          occupy_corner_cell();
+          pan();//occupy_corner_cell();
         }
         //console.log("TO be implemented.")
       }
