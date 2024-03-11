@@ -14,6 +14,7 @@ function rs(){
             board[rsf][rsr] = "_";
         }
     }
+    con1 = ["", false, 0];
     t = 0;
     setTimeout(default_settings, 250);
 }
