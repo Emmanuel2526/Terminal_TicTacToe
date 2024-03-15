@@ -17,6 +17,14 @@ function occupy_corner_cell(){
     por =  getRandomInt(0, 3);
   }
 }
+function occupy_non_corner_cell(){
+  let pos = [[a, 2], [b, 3], [c, 2], [b, 1]];
+  let por =  getRandomInt(0, 3);
+  while(true){
+    if(cell(pos[por][0], pos[por][1], 'r', null) == "_"){cell(pos[por][0], pos[por][1], 's', tl[t%2]); break;}
+    por =  getRandomInt(0, 3);
+  }
+}
 function occupy_adjacent_cell(){
   let por = getRandomInt(1, 2);
   while(true){
@@ -116,11 +124,45 @@ function ai(){
       let con1 = cell(b, 1, 'r', null) + cell(b, 3, 'r', null);
       let con2 = cell(a, 2, 'r', null) + cell(c, 2, 'r', null);
       let con3 = tl[(t+1)%2] + tl[(t+1)%2];
-      if(con1 == con3 || con2 == con3){
+      let con4 = cell(a, 1, 'r', null) + cell(a, 3, 'r', null) + cell(c, 1, 'r', null) + cell(c, 3, 'r', null);
+      let con4c = ['a1', 'a3', 'c1', 'c3'];
+      let con4b = false;
+      let con5b = false;
+      for(let i=0; i<4; ++i){
+	if(con4[i] == tl[(t+1)%2]){
+	  for(let j=0; j<4; ++j){
+	    if(con4[j] == tl[t%2]){
+		if(con4c[i][0] != con4c[j][0]){con4b = true;}
+                break;
+	    }else if(i != j && con4[j] == tl[(t+1)%2]){
+		if(con4c[i][0] != con4c[j][0]){con5b = true;}
+                break;
+	    }
+	  }
+	  break;
+	}
+      }
+      console.log(con4b);
+      if(con1 == con3 || con2 == con3 || con4b){
         occupy_corner_cell();//N.B: This condition only happens when the user did not occupy centre square to begin with. At this poiint the computer has won the game
+      }else if(con5b){console.log("Cross Cell Occupied")
+	occupy_non_corner_cell();
       }else{
         if(!block(false)){//try to block, if you cannot then...
-          pan();//occupy_corner_cell();
+          //pan();//occupy_corner_cell();
+	  /*
+	    This is for if you were able to take the centre square.
+	     A number of things could happen here, the ones which require your attention are stated below:
+	      1. If the user  occupies two non-adjacent corner squares
+	    This is for if you were not able to take the centre square.
+	     There is only one move I can think of that the user can play to achieve a two way.
+	      1. Obviously if the user takes the centre square you should be blocking on t = 3.
+	      2. Also if the user takes the centre square you take a corner square.
+	      3. If 1 is false, and you did 2 (which you are programmed to do) it can only mean that the user has played a corner-square which is non-adjacent to yours.
+	      Solution: Occupy a corner square.
+	      Solved: See con4, con4c, con4b and the for loops and if statements that utilize the.
+	  */
+	  console.log("Has not been coded yet.");
         }
         //console.log("TO be implemented.")
       }
