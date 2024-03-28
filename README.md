@@ -46,8 +46,23 @@ In the above case, the game ends in a draw as no player has won and all 9 cells 
 4. settings.js
 5. style.css
 6. variables.js
+7. LICENSE.txt
 ######
 1. index.html:
   This is the entry point of the program where all game visuals are displayed.
 2. README.md:
-         
+  This mostly contains information about how the game works, including links to relevant files.
+3. script.js:
+  For game functionality and implementation of game logic.
+4. settings.js:
+  Contains code to let users customize the game to their preference.
+5. style.css:
+  Contains the styling of the game.
+6. variables.js:
+  Contains game variables that are often used in different parts of the program.
+7. LICENSE.txt:
+  This contians the license of the repository which dictates how it can/cannot be used.
+8. ComputerAsFirstPlayer.md:
+  This contains an in-dept explanation of the thought process which led to the creation of an unbeatable computer first player.
+9. ComputerAsSecondPlayer.md:
+  This contains an in-dept explanation of the thought process which led to the creation of an unbeatable computer second player.
