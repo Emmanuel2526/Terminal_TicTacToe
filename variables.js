@@ -3,41 +3,41 @@
 var default_settings_items = {
     "page": "page1",
     "playWith": "computer",
-    "computerGoes" : "second",
+    "computerGoes" : "first",
     "symbolGoesFirst" : "X"
 }
 //Variables for settings ends here
 //Variables for game starts here
-a = 1;
-b = 2; 
-c = 3; 
-tl = ["_", "_"]; 
-con1 = ["", false, 0];
-con1l = [[[c, 3], [c, 2], [b, 3]],
+var a = 1;
+var b = 2; 
+var c = 3; 
+var tl = ["_", "_"]; 
+var con1 = ["", false, 0];
+var con1l = [[[c, 3], [c, 2], [b, 3]],
          [[a, 3], [a, 2], [b, 3]],
          [[a, 1], [b, 1], [a, 2]],
          [[c, 1], [b, 1], [c, 2]]
         ];
-con2 = 0;
-con2l = [[[a, 2], [c, 1], [c, 3]],
+var con2 = 0;
+var con2l = [[[a, 2], [c, 1], [c, 3]],
          [[b, 3], [a, 1], [a, 3]],
          [[c, 2], [a, 1], [a, 3]],
          [[b, 1], [a, 3], [c, 3]]
         ];
 if(default_settings_items["symbolGoesFirst"] == "X"){tl = ["X", "O"];}else{tl = ["O", "X"];}
-t = 0; //  tHIS IS THE COUNT VARAIBLE FOR WHOSE TURN IT IS
+var t = 0; //  tHIS IS THE COUNT VARAIBLE FOR WHOSE TURN IT IS
 //playwith = "computer";
 //playwith = "human";
-gp = 0;
-gpl = [];
-ava = false;
-board = [["_", "_", "_"],
+var gp = 0;
+var gpl = [];
+var ava = false;
+var board = [["_", "_", "_"],
          ["_", "_", "_"],
          ["_", "_", "_"]]; 
-boardn = [["a3", "b3", "c3"],
+var boardn = [["a3", "b3", "c3"],
           ["a2", "b2", "c2"],
           ["a1", "b1", "c1"]];
-wl = [[[a, 1], [b, 1], [c, 1]],
+var wl = [[[a, 1], [b, 1], [c, 1]],
       [[a, 2], [b, 2], [c, 2]],
       [[a, 3], [b, 3], [c, 3]],
       [[a, 1], [a, 2], [a, 3]],

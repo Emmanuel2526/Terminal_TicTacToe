@@ -210,15 +210,22 @@ function ai(){
   t++;
 }
 function ttt(f, r, cn){
-  if(win() || ava){return;}/*ava is a mode which lets the computer play against itself.*/
+  if(win() || ava){
+    return;
+  }
   if(cell(f, r, 'r', null) == "_"){
     cell(f, r, 's', tl[t%2]);
-    console.log("player: "+ tl[t%2] + " : " +t);
-    //localStorage.test += '['+board+']';
-    if(win()){alert("Player "+tl[t%2]+" won!!"); /*localStorage.test += 'e'*/return;}
-    t++;//Changes it to the next player turn
-    if(default_settings_items["playWith"] == "computer"){setTimeout(ai, 250);}
+    if(win()){
+      alert("Player "+tl[t%2]+" won!!"); 
+      return;
+    }
+    t++;
+    if(default_settings_items["playWith"] == "computer"){
+      setTimeout(ai, 250);
+    }
     //Second player clicks and restarts whole function. If ai second, ai here.
-    if(draw()){alert("Draw!!!")}
+    if(draw()){
+      alert("Draw!!!");
+    }
   }
 }
