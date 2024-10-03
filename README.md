@@ -1,41 +1,41 @@
 # TicTacToe
 ## Overview of The Game
 The game of TicTacToe is a game played by two players, it consists of a 3x3 grid which contains 9 cells.
-|*|1|2|3|
+|*|a|b|c|
 |-:|:-:|:-:|:-|
-|c|_|_|_|
-|b|_|_|_|
-|a|_|_|_|
+|3|_|_|_|
+|2|_|_|_|
+|1|_|_|_|
 
 Players play using symbols "X" or "O".
-|*|1|2|3|
+|*|a|b|c|
 |-:|:-:|:-:|:-|
-|c|X|_|_|
-|b|_|O|_|
-|a|_|_|_|
+|3|X|_|_|
+|2|_|O|_|
+|1|_|_|_|
 
 To win, one must get a 3 vertical/horizontal/diagonal cells to have the same symbol ("X" or "O"), in this
 case the symbol will be that of the player who hopes to win.
-|*|1|2|3|
+|*|a|b|c|
 |-:|:-:|:-:|:-|
-|c|X|_|_|
-|b|_|X|O|
-|a|O|_|X|
+|3|X|_|_|
+|2|_|X|O|
+|1|O|_|X|
 
 In the above case, player X has won, by filling consecutive diagonal squares with the symbol X.
-|*|1|2|3|
+|*|a|b|c|
 |-:|:-:|:-:|:-|
-|c|X|_|_|
-|b|O|O|O|
-|a|_|_|X|
+|3|X|_|_|
+|2|O|O|O|
+|1|_|_|X|
 
 In the above case, player O has won, by filling consecutive horizontal squares with the symbol O.
 If all 9 cells are filled and no player has won, then the game results in a draw.
-|*|1|2|3|
+|*|a|b|c|
 |-:|:-:|:-:|:-|
-|c|X|O|X|
-|b|O|O|X|
-|a|X|X|O|
+|3|X|O|X|
+|2|O|O|X|
+|1|X|X|O|
 
 In the above case, the game ends in a draw as no player has won and all 9 cells are filled up.
 
