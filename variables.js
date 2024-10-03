@@ -25,7 +25,7 @@ var con2l = [[[a, 2], [c, 1], [c, 3]],
          [[b, 1], [a, 3], [c, 3]]
         ];
 if(default_settings_items["symbolGoesFirst"] == "X"){tl = ["X", "O"];}else{tl = ["O", "X"];}
-var t = 0; //  tHIS IS THE COUNT VARAIBLE FOR WHOSE TURN IT IS
+var t = 0; //  THIS IS THE COUNT VARAIBLE FOR WHOSE TURN IT IS
 //playwith = "computer";
 //playwith = "human";
 var gp = 0;

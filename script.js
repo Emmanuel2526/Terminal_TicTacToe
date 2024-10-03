@@ -89,30 +89,6 @@ function block(win_opponent){
   if(win_opponent){t += 1;}
   return false
 }
-function computer1(){
-  if(localStorage.count1.length - 2 == 0 && localStorage.v == "O"){		
-		localStorage.player_string = "X"
-		localStorage.ai_string = "O"
-	}else if(localStorage.count1.length - 2 == 0 && localStorage.v == "X"){		
-		localStorage.player_string = "O"
-		localStorage.ai_string = "X"
-	}else{
-		//Do nothing 
-	}
-	if(localStorage.count1.length - 2 == 0  && !game_over){
-		//alert("computers turn")
-		play_bb2()
-	}if(localStorage.count1.length - 2 == 2 && !game_over){
-		//alert("computers turn")
-		check_config()
-		non_ran_cmove_cenoc()
-	}else if( localStorage.count1.length - 2 == 4 || localStorage.count1.length - 2 == 6 || localStorage.count1.length - 2 == 8 && !game_over){
-		//alert("computers turn")
-		react()
-	}else{
-		//Do nothing
-	}
-}
 function ai(){
   if(win()){/*localStorage.test += 'e'*/return;}
   if(default_settings_items["computerGoes"] == "second"){ 
