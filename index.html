@@ -6,6 +6,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="switches.css">
     </head>
     <body>
         <!--Page 1-->
@@ -35,50 +36,14 @@
         </div>
         <!--Page 2-->
         <div id="settings_page">
-            <div id = "gn">Settings</div>
-            <div id="subs">First player goes as?</div>
-            <div id="ans">
-                <input type="checkbox" id="firstX">
-                <label for="firstX">X</label>
-                <input type="checkbox" id="firstO">
-                <label for="firstO">O</label>
-            </div>
-            <div id="result">Therefore second player goes as:</div>
-            <div id="subs">Play with?</div>
-            <div id="ans">
-                <input type="checkbox" id="playHuman">
-                <label for="playHuman">Me</label>
-                <input type="checkbox" id="playComputer">
-                <label for="playComputer">Computer</label>
-            </div>
-            <!--If play with computer-->
-            <div id="playWithComputer">
-                <div id="subs">Who plays first?</div>
-                <div id="ans">
-                    <input type="checkbox" id="meplay">
-                    <label for="meplay">Me</label>
-                    <input type="checkbox" id="computerplay">
-                    <label for="computerplay">Computer</label>
-                </div>
-                <div id="subs">Difficulty Level?</div>
-                <div id="ans">
-                    <input type="checkbox" id="easy_level">
-                    <label for="easy_level">Easy</label>
-                    <input type="checkbox" id="medium_level">
-                    <label for="medium_level">Hard</label>
-                    <input type="checkbox" id="hard_level">
-                    <label for="hard_level">Hard</label>
-                </div>
-            </div>
-            <!--If play with human.-->
-            <div id="playWithHuman">
-                Not sure what to ask.
-            </div>
-            
-            
-            <button class="button_style">Save</button>
-            <button class="button_style">Restore</button>
-            <button onclick="st('return_to_game')" class="button_style">Return</button>
+          <h2>Player X plays first:
+          <label class="switch">
+            <input type="checkbox" checked>
+            <span class="slider round"></span>
+          </label>
+          </h2>
+          <br>
+          <button onclick="st('return_to_game')" class="button_style">Return</button>
         </div>
         <script src="variables.js"></script>
         <script src="script.js"></script>

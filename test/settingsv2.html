@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Settings</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .settings-container {
+            width: 300px;
+            background-color: #1e1e2f;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            color: #ffffff;
+        }
+        .settings-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .settings-group {
+            margin-bottom: 15px;
+        }
+        .settings-group label {
+            display: block;
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+        .settings-group select,
+        .settings-group input[type="checkbox"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #2a2a3e;
+            color: #ffffff;
+        }
+        .settings-group input[type="checkbox"] {
+            width: auto;
+            margin-right: 10px;
+        }
+        .settings-footer {
+            display: flex;
+            justify-content: space-between;
+        }
+        .settings-footer button {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #d9534f;
+            color: white;
+            font-weight: bold;
+        }
+        .settings-footer button:hover {
+            background-color: #c12f2a;
+        }
+        .help-btn {
+            background-color: #5bc0de;
+        }
+        .help-btn:hover {
+            background-color: #31b0d5;
+        }
+    </style>
+</head>
+<body>
+    <div class="settings-container">
+        <h2>Game Settings</h2>
+        <div class="settings-group">
+            <label for="country">Country</label>
+            <select id="country" name="country">
+                <option value="brazil">Brazil</option>
+                <option value="usa">USA</option>
+                <option value="uk">UK</option>
+                <option value="nigeria">Nigeria</option>
+            </select>
+        </div>
+        <div class="settings-group">
+            <label for="language">Language</label>
+            <select id="language" name="language">
+                <option value="english">English</option>
+                <option value="spanish">Spanish</option>
+                <option value="french">French</option>
+                <option value="portuguese">Portuguese</option>
+            </select>
+        </div>
+        <div class="settings-group">
+            <label><input type="checkbox" id="sounds"> Sounds</label>
+            <label><input type="checkbox" id="music"> Music</label>
+            <label><input type="checkbox" id="hard-mode"> Hard Mode</label>
+            <label><input type="checkbox" id="dark-mode"> Dark Mode</label>
+        </div>
+        <div class="settings-footer">
+            <button onclick="deleteProgress()">Delete Progress</button>
+            <button class="help-btn" onclick="showHelp()">Help</button>
+        </div>
+    </div>
+
+    <script>
+        function deleteProgress() {
+            alert('Progress deleted!');
+        }
+        function showHelp() {
+            alert('Help is on the way!');
+        }
+    </script>
+</body>
+</html>
