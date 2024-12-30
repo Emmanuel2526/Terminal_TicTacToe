@@ -12,8 +12,8 @@
         <div id="game">
             <div id = "gn">
                 TicTacToe: <a href="https://github.com/OsazuwaEmmanuel/TicTacToe.git">Github</a><br>
-                <button id="so" onclick="rs()">StartOver</button>
-                <button id="settings" class="settings_style" onclick="st('show_settings')">Settings</button>
+                <button class="button_style" onclick="rs()">StartOver</button>
+                <button class="button_style" onclick="st('show_settings')">Settings</button>
             </div>
             <table id="board">
                 <tr>
@@ -75,9 +75,10 @@
                 Not sure what to ask.
             </div>
             
-            <button id="trestore_default_settings" class="settings_style">Restore Defaults</button>
-            <button id="save_settings" class="settings_style">Save</button>
-            <button id="so" onclick="st('return_to_game')">Return</button>
+            
+            <button class="button_style">Save</button>
+            <button class="button_style">Restore</button>
+            <button onclick="st('return_to_game')" class="button_style">Return</button>
         </div>
         <script src="variables.js"></script>
         <script src="script.js"></script>

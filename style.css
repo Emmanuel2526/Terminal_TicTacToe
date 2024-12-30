@@ -56,19 +56,7 @@ label {
   color: black;
   font-size: 40px;
 }
-#so{
-  background-color:green;
-  font-size: 15px;
-  width: 100px;
-  height: 50px;
-}
-.settings_style{
-  background-color:green;
-  font-size: 15px;
-  width: 100px;
-  height: 50px;
-}
-#restore_default_settings{
+.button_style{
   background-color:green;
   font-size: 15px;
   width: 100px;
