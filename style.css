@@ -59,27 +59,18 @@ label {
 #so{
   background-color:green;
   font-size: 15px;
-  /*position: fixed;
-  right: 10px;
-  top: 2px;*/
   width: 100px;
   height: 50px;
 }
 .settings_style{
   background-color:green;
   font-size: 15px;
-  /*position: fixed;
-  right: 111px;
-  top: 2px;*/
   width: 100px;
   height: 50px;
 }
 #restore_default_settings{
   background-color:green;
   font-size: 15px;
-  /*position: fixed;
-  right: 212px;
-  top: 2px;*/
   width: 100px;
   height: 50px;
 }
@@ -92,6 +83,7 @@ label {
 }
 #settings_page{
   display: none;
+  text-align: center;
 }
 #game{
   display: none;
