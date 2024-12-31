@@ -18,7 +18,13 @@ function rs(){
     t = 0;
     setTimeout(default_settings, 250);
 }
-function compF(){if(default_settings_items["playWith"] == "computer" && default_settings_items["computerGoes"] == "first"){ai();}}
+
+function compF(){
+  if(default_settings_items["playWith"] == "computer" && default_settings_items["computerGoes"] == "first"){
+    ai();
+  }
+}
+
 function default_settings(){
     compF();
     //Play with computer is default so when you got to setting for the first time, it should already be checked.
@@ -30,6 +36,16 @@ function default_settings(){
 }
 function load_default_settings(){
     setTimeout(default_settings, 250);
+}
+function adjust_settings(v){
+  if(v == 1){
+    //default_settings_items["symbolGoesFirst"] = 
+    let holdv = tl[0];
+    tl[0] = tl[1];
+    tl[1] = holdv;
+    default_settings_items["page"] = "page2";
+    rs();
+  }
 }
 window.onload = function(){
     load_default_settings();

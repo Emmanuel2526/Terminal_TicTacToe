@@ -49,3 +49,4 @@ var wl = [[[a, 1], [b, 1], [c, 1]],
       [[a, 3], [b, 2], [c, 1]],
       [[c, 3], [b, 2], [a, 1]]
   ];
+var symbolGoesFirst_Count = 0;
